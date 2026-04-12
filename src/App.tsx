@@ -1,5 +1,7 @@
+import Core from './pages/Core';
+
 function App() {
-  return <div>test</div>;
+  return <Core />;
 }
 
 export default App;
