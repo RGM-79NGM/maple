@@ -7,13 +7,21 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'IBMPLEXMono Regular';
+  src: url('./assets/fonts/IBM_Plex_Mono/IBMPlexMono-Regular.ttf');
+  font-weight: 400;
+  font-style: normal;
+}
+
 :root {
   --color-bg: black;
   --color-font: white;
 }
 
 body {
-  font-family: 'Michrona Regular';
+  font-family: 'IBMPLEXMono Regular';
+  /* font-family: 'Michrona Regular'; */
   background-color: var(--color-bg);
   color: var(--color-font);
 }
