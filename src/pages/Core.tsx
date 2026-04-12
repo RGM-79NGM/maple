@@ -1,6 +1,9 @@
+import { useState } from 'react';
+
 const Core = () => {
-  const yearDays = Array.from({ length: 365 }, (_, i) => i + 1);
-  // console.log('⬜ - Core - yearDays:', yearDays);
+  const [entries, setEntries] = useState([]);
+  const [average, setAvarage] = useState();
+  const [total, setTotal] = useState();
 
   function generateYearDays(year) {
     const days = [];
@@ -47,18 +50,18 @@ const Core = () => {
   const firstDayOffset = days[0].weekday;
   const monthLabels = getMonthLabels(days, firstDayOffset);
 
-  const paddedDays = [
-    ...Array.from({ length: firstDayOffset }, () => null),
-    ...days,
-  ];
+  // const paddedDays = [
+  //   ...Array.from({ length: firstDayOffset }, () => null),
+  //   ...days,
+  // ];
 
   return (
-    <div>
-      <div className="pl-5 p-10 mx-5 my-10 border border-[#1e1e1f] rounded-lg">
+    <div className="mt-28 flex h-full w-full justify-center">
+      <div className="p-5  border border-[#1e1e1f] rounded-lg">
         <label className="text-gray-200 text-[21px]  font-extrabold">
           Save for my car
         </label>
-        <div className="mt-10 w-full align-top  flex gap-2">
+        <div className="mt-5 w-full align-top  flex gap-2">
           <div className="w-full py-1 rounded-sm flex gap-1 ">
             <div className="relative">
               {/* Month labels */}
