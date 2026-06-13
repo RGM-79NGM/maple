@@ -1,17 +1,19 @@
 @import 'tailwindcss';
 
 @font-face {
-  font-family: 'Michrona Regular';
-  src: url('./assets/fonts/Michroma/Michroma-Regular.ttf');
-  font-weight: 400;
+  font-family: 'Inter';
+  src: url('./assets/fonts/Inter/Inter-VariableFont_opsz,wght.ttf')
+    format('truetype');
+  font-weight: 100 900;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'IBMPLEXMono Regular';
-  src: url('./assets/fonts/IBM_Plex_Mono/IBMPlexMono-Regular.ttf');
-  font-weight: 400;
-  font-style: normal;
+  font-family: 'Inter';
+  src: url('./assets/fonts/Inter/Inter-Italic-VariableFont_opsz,wght.ttf')
+    format('truetype');
+  font-weight: 100 900;
+  font-style: italic;
 }
 
 :root {
@@ -20,8 +22,7 @@
 }
 
 body {
-  font-family: 'IBMPLEXMono Regular';
-  /* font-family: 'Michrona Regular'; */
+  font-family: 'Inter', sans-serif;
   background-color: var(--color-bg);
   color: var(--color-font);
 }
