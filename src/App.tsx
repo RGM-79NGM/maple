@@ -1,7 +1,7 @@
-import Core from './pages/Core';
+import MainPage from './pages/MainPage';
 
 function App() {
-  return <Core />;
+  return <MainPage />;
 }
 
 export default App;
