@@ -1,0 +1,4 @@
+[] Add year select component(current year/last 365 days)
+[] Add summary data bellow the heat map
+[] Add the create goal modal
+[] new test item

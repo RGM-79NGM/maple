@@ -1,7 +1,3 @@
-# Cyber Gallery
+# Maple
 
--v: 0.1 alpha
-
-status: loading
-
-..
+A desktop habit tracker app(currently in the beta version)
