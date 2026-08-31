@@ -2,12 +2,12 @@ import { useState } from 'react';
 import HeatMap from '../components/heat-map/HeathMap';
 import Modal from '../components/Modal';
 import CreateHabit from '../components/create-habit/CreateHabit';
-import { createStickyWindow } from '../components/StickWindow';
+import Header from '../components/Header';
 
 const Core = () => {
-  const [entries, setEntries] = useState([]);
-  const [average, setAverage] = useState();
-  const [total, setTotal] = useState();
+  // const [entries, setEntries] = useState([]);
+  // const [average, setAverage] = useState();
+  // const [total, setTotal] = useState();
   const [openCreateHabitModal, setOpenCreateHabitModal] = useState(false);
   console.log('⬜ - Core - openCreateHabitModal:', openCreateHabitModal);
 
@@ -17,8 +17,9 @@ const Core = () => {
   // ];
 
   return (
-    <>
       <div className="flex flex-col justify-center">
+        <Header />
+
         <h3 className="flex w-full items-baseline justify-center pt-5 text-center text-4xl font-bold">
           <span className="w-36 text-center">Habits</span>
           <span
@@ -32,10 +33,9 @@ const Core = () => {
         <div className="mt-7 flex h-full w-full justify-center">
           <HeatMap />
         </div>
+      {openCreateHabitModal && <Modal content={<CreateHabit />} />}
       </div>
 
-      {openCreateHabitModal && <Modal content={<CreateHabit />} />}
-    </>
   );
 };
 
