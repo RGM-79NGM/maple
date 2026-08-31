@@ -28,7 +28,7 @@ const HeatMap = () => {
   }
 
   function getMonthLabels(days: any, offset: any) {
-    const labels = [];
+    const labels: any = [];
 
     days.forEach((day: any, i: any) => {
       if (day.date.getDate() === 1) {
@@ -76,7 +76,7 @@ const HeatMap = () => {
               {/* empty cell for weekday column */}
               <div className="w-2.5" />
 
-              {monthLabels.map((m, i) => (
+              {monthLabels.map((m: any, i: number) => (
                 <div
                   key={i}
                   className="text-[11px]"
