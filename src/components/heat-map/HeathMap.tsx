@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Icon } from '@iconify/react';
 
 const HeatMap = () => {
   const [isCollapsed, setIsCollapsed] = useState(true);
@@ -49,82 +50,51 @@ const HeatMap = () => {
   const monthLabels = getMonthLabels(days, firstDayOffset);
 
   return (
-    <div className="rounded-lg border border-[#1e1e1f] p-3">
+    <div className="bg-background-secondary w-[clamp(200px,90vw,800px)] rounded-lg border border-[#1e1e1f] p-3">
       <label className="flex w-full items-center justify-between pr-1 text-[18px] font-medium text-gray-200">
-        <span>Save $5,000.00</span>
+        <span className="text-sm text-[#48494b] lg:text-base">5,000 KMs</span>
         <div className="flex h-full items-center gap-2 p-0.5">
-          <span className="text-[11px] font-normal">2026</span>
-          <span className="material-icons cursor-pointer rounded-md p-0.5 text-[15px]! transition duration-150 hover:bg-gray-800">
-            calendar_today
-          </span>
-          <span className="material-icons cursor-pointer rounded-md p-0.5 text-[15px]! transition duration-150 hover:bg-gray-800">
-            more_vert
-          </span>
-          <span
+          <Icon
             onClick={() => setIsCollapsed((prev) => !prev)}
-            className="material-icons cursor-pointer rounded-md p-0.5 text-[15px]! transition duration-150 hover:bg-gray-800"
-          >
-            keyboard_arrow_down
-          </span>
+            icon="mdi:keyboard-arrow-down"
+            className="text-txt-primary text-lg"
+          />
         </div>
       </label>
-      <div className="mt-5 flex w-full gap-2 align-top">
-        <div className="flex w-full gap-1 rounded-sm py-1">
-          <div className="relative">
+      <div className="mt-5 flex w-full gap-2">
+        <div className="flex w-full gap-1 rounded-sm">
+          <div className="flex w-full min-w-0 flex-col">
             {/* Month labels */}
-            <div className="mb-1 grid auto-cols-[10.8px] grid-flow-col gap-0.75">
-              {/* empty cell for weekday column */}
-              <div className="w-2.5" />
+            {/* <div></div> */}
+            {/* <div className="grid auto-cols-[10.8px] grid-flow-col gap-0.75"> */}
+            {/* empty cell for weekday column */}
+            {/* <div className="w-2.5 " /> */}
+            {/* </div> */}
 
-              {monthLabels.map((m: any, i: number) => (
-                <div
-                  key={i}
-                  className="text-[11px]"
-                  style={{
-                    gridColumnStart: m.column + 2, // +1 for label column, +1 for grid index
-                  }}
-                >
-                  {m.label}
-                </div>
-              ))}
-            </div>
-
-            {/* Main grid */}
+            {/* GRID */}
             <div
-              className="grid grid-flow-col gap-0.75"
-              style={{
-                gridTemplateRows: 'repeat(7, 10px)',
-                gridTemplateColumns: '24px repeat(53, 10px)',
-              }}
+              className="grid grid-flow-col grid-cols-[repeat(53,8px)] grid-rows-[repeat(7,8px)] gap-px sm:grid-cols-[repeat(53,10px)] sm:grid-rows-[repeat(7,10px)] sm:gap-0.5 lg:grid-cols-[repeat(53,12px)] lg:grid-rows-[repeat(7,12px)] lg:gap-0.75" // style={{
             >
-              {/* weekday labels */}
-              {['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'].map((d, i) => (
-                <div
-                  key={i}
-                  className="flex w-6 items-center justify-end pr-1 text-[9px]"
-                >
-                  {d}
-                </div>
-              ))}
-
               {/* offset */}
-              {Array.from({ length: firstDayOffset }, (_, i) => (
-                <div key={`empty-${i}`} />
-              ))}
+              {/* {Array.from({ length: firstDayOffset }, (_, i) => (
+                <div className="bg-amber-950" key={`empty-${i}`} />
+              ))} */}
 
-              {/* days */}
+              {/* CELLS */}
               {days.map((day, i) => (
                 <div
                   key={i}
                   title={day.yearDayName}
-                  className="h-2.5 w-2.5 cursor-pointer rounded-[1.8px] bg-[#1e1e1f]"
+                  className="bg-primary aspect-square w-full cursor-pointer rounded-[1.6px]"
                 />
               ))}
             </div>
+
+            {/* BOTTOM INFO */}
             <div
               className={`${
-                isCollapsed ? 'max-h-0 opacity-0' : 'max-h-125 opacity-100'
-              } mt-4 flex items-center justify-between px-2 transition-all duration-150`}
+                isCollapsed ? 'max-h-0 opacity-0' : 'mt-4 max-h-125 opacity-100'
+              } flex items-center justify-between bg-blue-300 px-2 transition-all duration-150`}
             >
               <div className="flex flex-col gap-0 text-[12px]">
                 <span>Number of entries: 4</span>
