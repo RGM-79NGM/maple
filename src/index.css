@@ -14,8 +14,16 @@
   font-family: 'Inter';
 }
 
+@theme {
+  --color-primary: #79a617;
+  --color-background: #191a1b;
+  --color-background-secondary: #141516;
+  --color-txt-primary: rgb(231, 234, 224);
+  --color-txt-shaded: rgb(72, 73, 75);
+}
+
 :root {
-  --color-bg: #0c101a;
+  --color-bg: #191a1b;
   --color-font: white;
 }
 
