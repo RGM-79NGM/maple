@@ -1,4 +1,5 @@
-[] Add year select component(current year/last 365 days)
-[] Add summary data bellow the heat map
-[] Add the create goal modal
-[] new test item
+- add less ... more to the right side or the heat map
+- replace setting icon for iconify icon
+- add dynamic bg-color for each cell, make a temporary function using an
+arbitrary factor to define the color pallet
+- add close button to add habit modal
