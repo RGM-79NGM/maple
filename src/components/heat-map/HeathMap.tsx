@@ -51,7 +51,7 @@ const HeatMap = () => {
 
   return (
     <div className="bg-background-secondary w-[clamp(200px,90vw,800px)] rounded-lg border border-[#1e1e1f] p-3">
-      <label className="flex w-full items-center justify-between pr-1 text-[18px] font-medium text-gray-200">
+      <header className="flex w-full items-center justify-between pr-1 text-[18px] font-medium text-gray-200">
         <span className="text-sm text-[#48494b] lg:text-base">5,000 KMs</span>
         <div className="flex h-full items-center gap-2 p-0.5">
           <Icon
@@ -60,7 +60,7 @@ const HeatMap = () => {
             className="text-txt-primary text-lg"
           />
         </div>
-      </label>
+      </header>
       <div className="mt-5 flex w-full gap-2">
         <div className="flex w-full gap-1 rounded-sm">
           <div className="flex w-full min-w-0 flex-col">

@@ -1,4 +1,4 @@
-import { Cog8ToothIcon } from '@heroicons/react/24/outline';
+import { Icon } from '@iconify/react';
 
 const Header = () => {
   return (
@@ -7,9 +7,9 @@ const Header = () => {
         <img src="/logo.png" alt="" className="size-16" />
       </div>
 
-      <Cog8ToothIcon
+      <Icon
         className="hover:text-primary size-6 cursor-pointer transition duration-100"
-        title="settings"
+        icon="mdi:settings"
       />
     </div>
   );
