@@ -1,5 +1,4 @@
-- add less ... more to the right side or the heat map
-- add dynamic bg-color for each cell, make a temporary function using an
-arbitrary factor to define the color pallet
-- add close button to add habit modal
-- change logo to only 3 cells
+[ ] add less ... more to the right side or the heat map
+[ ] add dynamic bg-color for each cell, make a temporary function using an arbitrary factor to define the color pallet
+[ ] add close button to add habit modal
+[ ] change logo to only 3 cells
