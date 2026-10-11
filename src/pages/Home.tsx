@@ -2,9 +2,8 @@ import { useState } from 'react';
 import HeatMap from '../components/heat-map/HeathMap';
 import Modal from '../components/Modal';
 import CreateHabit from '../components/create-habit/CreateHabit';
-import Header from '../components/Header';
 
-const MainPage = () => {
+export const Home = () => {
   // const [entries, setEntries] = useState([]);
   // const [average, setAverage] = useState();
   // const [total, setTotal] = useState();
@@ -18,9 +17,7 @@ const MainPage = () => {
 
   return (
     <>
-      <div className="flex flex-col justify-center">
-        <Header />
-
+      <div className="">
         <h3 className="flex w-full items-center justify-center gap-2 pt-5 text-3xl">
           <span className="text-center font-semibold">HABITS</span>
           <span
@@ -41,5 +38,3 @@ const MainPage = () => {
     </>
   );
 };
-
-export default MainPage;
