@@ -1,0 +1,11 @@
+{
+  "userName": "5",
+  "habits": [
+    {
+      "habitName": "Ler livros",
+      "type": "quantity",
+      "entryName": "Pages",
+      "entries": [{}]
+    }
+  ]
+}
