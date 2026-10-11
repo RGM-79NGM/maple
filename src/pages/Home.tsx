@@ -8,7 +8,6 @@ export const Home = () => {
   // const [average, setAverage] = useState();
   // const [total, setTotal] = useState();
   const [openCreateHabitModal, setOpenCreateHabitModal] = useState(false);
-  console.log('⬜ - Core - openCreateHabitModal:', openCreateHabitModal);
 
   // const paddedDays = [
   //   ...Array.from({ length: firstDayOffset }, () => null),

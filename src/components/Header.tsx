@@ -1,6 +1,6 @@
 import { Icon } from '@iconify/react';
 
-const Header = () => {
+export const Header = () => {
   return (
     <div className="flex items-center justify-between px-10 py-4 pt-2 pl-5">
       <div className="flex flex-col leading-0.5">
@@ -14,5 +14,3 @@ const Header = () => {
     </div>
   );
 };
-
-export default Header;
