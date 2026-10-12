@@ -1,34 +1,35 @@
 @import 'tailwindcss';
 
 @font-face {
-  font-style: normal;
-  font-weight: 100 900;
-  src: url('./assets/fonts/Inter/Inter-VariableFont_opsz,wght.ttf') format('truetype');
-  font-family: 'Inter';
+	font-style: normal;
+	font-weight: 100 900;
+	src: url('./assets/fonts/Inter/Inter-VariableFont_opsz,wght.ttf') format('truetype');
+	font-family: 'Inter';
 }
 
 @font-face {
-  font-style: italic;
-  font-weight: 100 900;
-  src: url('./assets/fonts/Inter/Inter-Italic-VariableFont_opsz,wght.ttf') format('truetype');
-  font-family: 'Inter';
+	font-style: italic;
+	font-weight: 100 900;
+	src: url('./assets/fonts/Inter/Inter-Italic-VariableFont_opsz,wght.ttf')
+		format('truetype');
+	font-family: 'Inter';
 }
 
 @theme {
-  --color-primary: #79a617;
-  --color-background: #191a1b;
-  --color-background-secondary: #141516;
-  --color-txt-primary: rgb(231, 234, 224);
-  --color-txt-shaded: rgb(72, 73, 75);
+	--color-primary: #79a617;
+	--color-background: #191a1b;
+	--color-background-secondary: #141516;
+	--color-base1: rgb(231, 234, 224);
+	--color-base2: rgb(72, 73, 75);
 }
 
 :root {
-  --color-bg: #191a1b;
-  --color-font: white;
+	--color-bg: #191a1b;
+	--color-font: white;
 }
 
 body {
-  background-color: var(--color-bg);
-  color: var(--color-font);
-  font-family: 'Inter', sans-serif;
+	background-color: var(--color-bg);
+	color: var(--color-font);
+	font-family: 'Inter', sans-serif;
 }
