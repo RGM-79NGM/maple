@@ -4,36 +4,37 @@ import Modal from '../components/Modal';
 import CreateHabit from '../components/create-habit/CreateHabit';
 
 export const Home = () => {
-  // const [entries, setEntries] = useState([]);
-  // const [average, setAverage] = useState();
-  // const [total, setTotal] = useState();
-  const [openCreateHabitModal, setOpenCreateHabitModal] = useState(false);
+	// const [entries, setEntries] = useState([]);
+	// const [average, setAverage] = useState();
+	// const [total, setTotal] = useState();
 
-  // const paddedDays = [
-  //   ...Array.from({ length: firstDayOffset }, () => null),
-  //   ...days,
-  // ];
+	const [openCreateHabitModal, setOpenCreateHabitModal] = useState(false);
 
-  return (
-    <>
-      <div className="">
-        <h3 className="flex w-full items-center justify-center gap-2 pt-5 text-3xl">
-          <span className="text-center font-semibold">HABITS</span>
-          <span
-            // onClick={createStickyWindow}
-            onClick={() => setOpenCreateHabitModal(true)}
-            className="material-icons bg-background-secondary flex cursor-pointer items-center justify-center rounded-sm p-0.5 px-2 text-[20px]! transition duration-200 hover:bg-gray-900"
-          >
-            +
-          </span>
-        </h3>
-        <div className="mt-7 flex h-full w-full justify-center p-2">
-          <HeatMap />
-        </div>
-      </div>
+	// const paddedDays = [
+	//   ...Array.from({ length: firstDayOffset }, () => null),
+	//   ...days,
+	// ];
 
-      {/* CREATE HABIT */}
-      {openCreateHabitModal && <Modal content={<CreateHabit />} />}
-    </>
-  );
+	return (
+		<>
+			<div className="">
+				<h3 className="flex w-full items-center justify-center gap-2 pt-5 text-3xl">
+					<span className="text-center font-semibold">HABITS</span>
+					<span
+						// onClick={createStickyWindow}
+						onClick={() => setOpenCreateHabitModal(true)}
+						className="material-icons bg-background-secondary flex cursor-pointer items-center justify-center rounded-sm p-0.5 px-2 text-[20px]! transition duration-200 hover:bg-gray-900"
+					>
+						+
+					</span>
+				</h3>
+				<div className="mt-7 flex h-full w-full justify-center p-2">
+					<HeatMap />
+				</div>
+			</div>
+
+			{/* CREATE HABIT */}
+			{openCreateHabitModal && <Modal content={<CreateHabit />} />}
+		</>
+	);
 };

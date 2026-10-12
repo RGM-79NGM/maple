@@ -2,10 +2,12 @@ import { Outlet } from 'react-router-dom';
 import { Header } from '../components/Header';
 
 export const RootLayout = () => {
-  return (
-    <div>
-      <Header />
-      <Outlet />
-    </div>
-  );
+	return (
+		<div className="flex min-h-screen flex-col gap-1">
+			<Header />
+			<main className="flex flex-1 flex-col">
+				<Outlet />
+			</main>
+		</div>
+	);
 };
