@@ -2,7 +2,7 @@ import { Icon } from '@iconify/react';
 
 export const Header = () => {
 	return (
-		<div className="flex items-center justify-between border-b border-gray-300 px-10 py-4 pt-2 pl-5">
+		<div className="border-base2 flex items-center justify-between border-b px-10 py-4 pt-2 pl-5">
 			<div className="flex flex-col leading-0.5">
 				<img src="/logo.png" alt="" className="size-16" />
 			</div>

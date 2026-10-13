@@ -17,8 +17,8 @@
 
 @theme {
 	--color-primary: #79a617;
-	--color-background: #191a1b;
-	--color-background-secondary: #141516;
+	--color-bg: #191a1b;
+	--color-bg2: #141516;
 	--color-base1: rgb(231, 234, 224);
 	--color-base2: rgb(72, 73, 75);
 }
