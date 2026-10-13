@@ -1,13 +1,16 @@
 import { useState } from 'react';
 import { themes } from '../constants/themes';
+import { Icon } from '@iconify/react';
 
 interface Habit {
-	name: string;
-	colorTheme: string;
+	name?: string;
+	colorTheme?: string;
 }
 
 export const CreateHabit = () => {
-	const [newHabit, setNewHabit] = useState<Habit>();
+	const [newHabit, setNewHabit] = useState<Habit>({
+		colorTheme: Object.keys(themes)[0],
+	});
 	const [showDropdown, setShowDropdown] = useState(false);
 
 	return (
@@ -28,22 +31,36 @@ export const CreateHabit = () => {
 					</div>
 
 					<div className="flex flex-col gap-1">
+						Pick a color
 						<button
 							onClick={() => setShowDropdown((prev) => !prev)}
-							className="bg-bg2 flex cursor-pointer gap-1 rounded-md px-5 py-2"
+							className="bg-bg2 flex cursor-pointer items-center justify-between gap-1 gap-2 rounded-md px-5 py-2"
 						>
-							Pick a color
-						</button>
+							<div className="flex items-center gap-2">
+								<div
+									style={{
+										backgroundColor: themes[newHabit.colorTheme].highlight,
+									}}
+									className="size-3 rounded-sm"
+								></div>
+								{Object.keys(themes)[0]}
+							</div>
 
+							<Icon icon="mdi:keyboard-arrow-down" />
+						</button>
 						<div
 							className={`${showDropdown ? 'translate-y-0 opacity-100' : 'pointer-events-none -translate-y-2 bg-transparent opacity-0'} bg-bg2 border-bg2 rounded-md border transition duration-200`}
 						>
 							{Object.entries(themes).map(([name, theme]) => (
 								<li
 									key={name}
-									onClick={() => setNewHabit((prev) => ({ ...prev, colorTheme: name }))}
-
-									className="bg-bg2 text-base1 hover:bg-bg flex items-center gap-2 rounded-t-md px-6 py-2 transition duration-150"
+									onClick={() => {
+										if (newHabit.colorTheme !== name) {
+											setNewHabit((prev) => ({ ...prev, colorTheme: name }));
+										}
+										setShowDropdown((prev) => !prev);
+									}}
+									className="bg-bg2 text-base1 hover:bg-bg flex cursor-pointer items-center gap-2 rounded-t-md px-6 py-2 transition duration-150"
 								>
 									<div
 										style={{
@@ -54,21 +71,6 @@ export const CreateHabit = () => {
 									{name}
 								</li>
 							))}
-
-							<li
-								value="rose"
-								className="bg-bg2 text-base1 hover:bg-bg flex items-center gap-2 px-6 py-2 transition duration-150"
-							>
-								<div className="size-3 rounded-sm bg-rose-500"></div>
-								Rose
-							</li>
-							<li
-								value="indigo"
-								className="bg-bg2 text-base1 hover:bg-bg flex items-center gap-2 rounded-b-md px-6 py-2 transition duration-150"
-							>
-								<div className="size-3 rounded-sm bg-indigo-500"></div>
-								Indigo
-							</li>
 						</div>
 					</div>
 
