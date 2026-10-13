@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { themes } from '../constants/themes';
 import { Icon } from '@iconify/react';
 import { habitTypes } from '../constants/habitType';
+import { useNavigate } from 'react-router-dom';
 
 interface Habit {
 	name?: string;
@@ -11,12 +12,12 @@ interface Habit {
 }
 
 export const CreateHabit = () => {
+	const navigate = useNavigate();
 	const [newHabit, setNewHabit] = useState<Habit>({
 		colorTheme: Object.keys(themes)[0],
 		entries: [],
 		type: habitTypes[0].value,
 	});
-	console.log('🐟 - CreateHabit - newHabit:', newHabit);
 	const [showColorDropdown, setShowColorDropdown] = useState(false);
 	const [showTypeDropdown, setShowTypeDropdown] = useState(false);
 	const [errors, setErrors] = useState({
@@ -36,6 +37,12 @@ export const CreateHabit = () => {
 
 	function handleSave() {
 		if (!validate()) return;
+
+		const currentHabits = JSON.parse(localStorage.getItem('habits') || '[]');
+		const mergedHabits = [...currentHabits, newHabit];
+		localStorage.setItem('habits', JSON.stringify(mergedHabits));
+
+		navigate('/');
 	}
 
 	return (
@@ -66,7 +73,7 @@ export const CreateHabit = () => {
 							{/* Dropdown */}
 							<ul
 								onMouseDown={(e) => e.preventDefault()}
-								className={`${showTypeDropdown ? 'translate-y-0 opacity-100' : 'pointer-events-none -translate-y-2 bg-transparent opacity-0'} bg-bg2 border-bg2 absolute top-[100%] left-0 z-10 w-[90%] rounded-md border transition duration-200`}
+								className={`${showTypeDropdown ? 'translate-y-0 opacity-100' : 'pointer-events-none -translate-y-2 bg-transparent opacity-0'} bg-bg2 border-bg2 absolute top-[105%] left-0 z-10 w-[90%] rounded-md border transition duration-200`}
 							>
 								{habitTypes.map((habitType, i) => (
 									<li
@@ -109,26 +116,28 @@ export const CreateHabit = () => {
 
 					<div className="flex flex-col gap-1">
 						Pick a color
-						<button
-							onClick={() => setShowColorDropdown((prev) => !prev)}
-							className="bg-bg2 relative flex cursor-pointer items-center justify-between gap-2 rounded-md px-5 py-2"
-						>
-							<div className="flex items-center gap-2">
-								<div
-									style={{
-										backgroundColor: themes[newHabit.colorTheme].highlight,
-									}}
-									className="size-3 rounded-sm"
-								></div>
-								{Object.keys(themes)[0]}
-							</div>
+						<div className="relative flex flex-col gap-2">
+							<button
+								onClick={() => setShowColorDropdown((prev) => !prev)}
+								className="bg-bg2 flex cursor-pointer items-center justify-between gap-2 rounded-md px-5 py-2"
+							>
+								<div className="flex items-center gap-2">
+									<div
+										style={{
+											backgroundColor: themes[newHabit.colorTheme].highlight,
+										}}
+										className="size-3 rounded-sm"
+									></div>
+									{Object.keys(themes)[0]}
+								</div>
 
-							<Icon icon="mdi:keyboard-arrow-down" />
+								<Icon icon="mdi:keyboard-arrow-down" />
+							</button>
 
 							{/* Dropdown */}
 							<ul
 								onMouseDown={(e) => e.preventDefault()}
-								className={`${showColorDropdown ? 'translate-y-0 opacity-100' : 'pointer-events-none -translate-y-2 bg-transparent opacity-0'} bg-bg2 border-bg2 absolute bottom-[-110%] left-0 w-[90%] rounded-md border transition duration-200`}
+								className={`${showColorDropdown ? 'translate-y-0 opacity-100' : 'pointer-events-none -translate-y-2 bg-transparent opacity-0'} bg-bg2 border-bg2 absolute top-[105%] left-0 w-[90%] rounded-md border transition duration-200`}
 							>
 								{Object.entries(themes).map(([name, theme]) => (
 									<li
@@ -151,7 +160,7 @@ export const CreateHabit = () => {
 									</li>
 								))}
 							</ul>
-						</button>
+						</div>
 					</div>
 
 					<div className="flex justify-end pr-[3%]">

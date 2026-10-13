@@ -34,4 +34,55 @@ export const themes: Record<string, Theme> = {
 		block4: 'hsl(79 75.7% 37.1%)', // Base color
 		block5: 'hsl(79 75.7% 44.52%)', // + 5%
 	},
+	dar: {
+		bg: 'hsl(210 3.8% 10.2%)',
+		bgDarker: 'hsl(210 4.8% 8.2%)',
+		text: 'hsl(78 19.2% 89.8%)',
+		textFaint: 'hsl(220 2% 28.8%)',
+		textDark: 'hsl(210 3.8% 10.2%)',
+		error: 'hsl(0 75.7% 37.1%)',
+		errorDarker: 'hsl(0 75.6% 25.7%)',
+		colorfulError: 'hsl(0 75.7% 37.1%)',
+		colorfulErrorDarker: 'hsl(0 75.6% 25.7%)',
+		highlight: 'hsl(79 75.7% 37.1%)', // Base color
+		block1: 'hsl(210 3.8% 10.2%)', // neutral - same as bg
+		block2: 'hsl(79 75.7% 23.74%)', // - 5%
+		block3: 'hsl(79 75.7% 29.68%)', // - 5%
+		block4: 'hsl(79 75.7% 37.1%)', // Base color
+		block5: 'hsl(79 75.7% 44.52%)', // + 5%
+	},
+	derk: {
+		bg: 'hsl(210 3.8% 10.2%)',
+		bgDarker: 'hsl(210 4.8% 8.2%)',
+		text: 'hsl(78 19.2% 89.8%)',
+		textFaint: 'hsl(220 2% 28.8%)',
+		textDark: 'hsl(210 3.8% 10.2%)',
+		error: 'hsl(0 75.7% 37.1%)',
+		errorDarker: 'hsl(0 75.6% 25.7%)',
+		colorfulError: 'hsl(0 75.7% 37.1%)',
+		colorfulErrorDarker: 'hsl(0 75.6% 25.7%)',
+		highlight: 'hsl(79 75.7% 37.1%)', // Base color
+		block1: 'hsl(210 3.8% 10.2%)', // neutral - same as bg
+		block2: 'hsl(79 75.7% 23.74%)', // - 5%
+		block3: 'hsl(79 75.7% 29.68%)', // - 5%
+		block4: 'hsl(79 75.7% 37.1%)', // Base color
+		block5: 'hsl(79 75.7% 44.52%)', // + 5%
+	},
+	kom: {
+		bg: 'hsl(210 3.8% 10.2%)',
+		bgDarker: 'hsl(210 4.8% 8.2%)',
+		text: 'hsl(78 19.2% 89.8%)',
+		textFaint: 'hsl(220 2% 28.8%)',
+		textDark: 'hsl(210 3.8% 10.2%)',
+		error: 'hsl(0 75.7% 37.1%)',
+		errorDarker: 'hsl(0 75.6% 25.7%)',
+		colorfulError: 'hsl(0 75.7% 37.1%)',
+		colorfulErrorDarker: 'hsl(0 75.6% 25.7%)',
+		highlight: 'hsl(79 75.7% 37.1%)', // Base color
+		block1: 'hsl(210 3.8% 10.2%)', // neutral - same as bg
+		block2: 'hsl(79 75.7% 23.74%)', // - 5%
+		block3: 'hsl(79 75.7% 29.68%)', // - 5%
+		block4: 'hsl(79 75.7% 37.1%)', // Base color
+		block5: 'hsl(79 75.7% 44.52%)', // + 5%
+	},
 };
