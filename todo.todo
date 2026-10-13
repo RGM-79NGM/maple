@@ -1,9 +1,11 @@
-10-12-2026
-[x] make the CreateHabit page and add the route
-[x] add inputs and confirm button
+10-13-2026
 [ ] write down to the data.json file creating a habit object
 [ ] render one heat map for each habit object within data.json
 [ ] add less ... more to the right side or the heat map
 [ ] add dynamic bg-color for each cell, make a temporary function using an arbitrary factor to define the color pallet
 [ ] add close button to add habit modal
 [ ] change logo to only 3 cells
+
+10-12-2026
+[x] make the CreateHabit page and add the route
+[x] add inputs and confirm button
