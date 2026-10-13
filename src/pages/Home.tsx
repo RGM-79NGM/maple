@@ -1,15 +1,12 @@
-import { useState } from 'react';
 import HeatMap from '../components/heat-map/HeathMap';
-import Modal from '../components/Modal';
-import CreateHabit from '../components/create-habit/CreateHabit';
+import { useNavigate } from 'react-router-dom';
 
 export const Home = () => {
 	// const [entries, setEntries] = useState([]);
 	// const [average, setAverage] = useState();
 	// const [total, setTotal] = useState();
 
-	const [openCreateHabitModal, setOpenCreateHabitModal] = useState(false);
-
+	const navigate = useNavigate();
 	// const paddedDays = [
 	//   ...Array.from({ length: firstDayOffset }, () => null),
 	//   ...days,
@@ -21,8 +18,7 @@ export const Home = () => {
 				<h3 className="flex w-full items-center justify-center gap-2 pt-5 text-3xl">
 					<span className="text-center font-semibold">HABITS</span>
 					<span
-						// onClick={createStickyWindow}
-						onClick={() => setOpenCreateHabitModal(true)}
+						onClick={() => navigate('/create-habit')}
 						className="material-icons bg-background-secondary flex cursor-pointer items-center justify-center rounded-sm p-0.5 px-2 text-[20px]! transition duration-200 hover:bg-gray-900"
 					>
 						+
@@ -32,9 +28,6 @@ export const Home = () => {
 					<HeatMap />
 				</div>
 			</div>
-
-			{/* CREATE HABIT */}
-			{openCreateHabitModal && <Modal content={<CreateHabit />} />}
 		</>
 	);
 };
