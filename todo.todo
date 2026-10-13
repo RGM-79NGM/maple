@@ -1,6 +1,6 @@
 10-12-2026
 [x] make the CreateHabit page and add the route
-[ ] add inputs and confirm button
+[x] add inputs and confirm button
 [ ] write down to the data.json file creating a habit object
 [ ] render one heat map for each habit object within data.json
 [ ] add less ... more to the right side or the heat map
