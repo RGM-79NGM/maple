@@ -1,6 +1,6 @@
 10-13-2026
 [x] write down to the data.json file creating a habit object *Saving on localStorage for now
-[ ] render one heat map for each habit object within data.json
+[x] render one heat map for each habit object within data.json
 [ ] add less ... more to the right side or the heat map
 [ ] add dynamic bg-color for each cell, make a temporary function using an arbitrary factor to define the color pallet
 [ ] change logo to only 3 cells

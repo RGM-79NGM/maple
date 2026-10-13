@@ -6,6 +6,9 @@ export const Home = () => {
 	// const [average, setAverage] = useState();
 	// const [total, setTotal] = useState();
 
+	const habits = JSON.parse(localStorage.getItem('habits') || '[]');
+	console.log('🐟 - Home - habits:', habits);
+
 	const navigate = useNavigate();
 	// const paddedDays = [
 	//   ...Array.from({ length: firstDayOffset }, () => null),
@@ -24,9 +27,18 @@ export const Home = () => {
 						+
 					</span>
 				</h3>
-				<div className="mt-7 flex h-full w-full justify-center p-2">
-					<HeatMap />
-				</div>
+
+				{!habits?.length ? (
+					<div>No habits found</div>
+				) : (
+					<div className="flex flex-col items-center gap-3 py-2">
+						{habits.map((habit, i) => (
+							<div key={i}>
+								<HeatMap />
+							</div>
+						))}
+					</div>
+				)}
 			</div>
 		</>
 	);
