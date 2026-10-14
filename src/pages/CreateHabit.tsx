@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import { themes } from '../constants/themes';
-import { Icon } from '@iconify/react';
-import { habitTypes } from '../constants/habitType';
 import { useNavigate } from 'react-router-dom';
+import { Icon } from '@iconify/react';
+import { themes } from '../constants/themes';
+import { habitTypes } from '../constants/habitType';
 
 interface Habit {
 	name?: string;

@@ -1,24 +1,16 @@
-import HeatMap from '../components/heat-map/HeathMap';
 import { useNavigate } from 'react-router-dom';
+import HeatMap from '../components/heat-map/HeathMap';
 
 export const Home = () => {
 	// const [entries, setEntries] = useState([]);
 	// const [average, setAverage] = useState();
-	// const [total, setTotal] = useState();
-
 	const habits = JSON.parse(localStorage.getItem('habits') || '[]');
-	console.log('🐟 - Home - habits:', habits);
-
 	const navigate = useNavigate();
-	// const paddedDays = [
-	//   ...Array.from({ length: firstDayOffset }, () => null),
-	//   ...days,
-	// ];
 
 	return (
-		<div className="flex min-h-0 flex-1 flex-col">
-			<h3 className="flex w-full items-center justify-center gap-2 pt-5 text-3xl">
-				<span className="text-center font-semibold">HABITS</span>
+		<div className="flex min-h-0 flex-1 flex-col gap-5">
+			<header className="flex w-full items-center justify-center gap-2 pt-5 text-3xl">
+				<h3 className="text-center font-semibold">HABITS</h3>
 				<span
 					onClick={() => navigate('/create-habit')}
 					title="Add new habit"
@@ -26,20 +18,20 @@ export const Home = () => {
 				>
 					+
 				</span>
-			</h3>
+			</header>
 
 			{!habits?.length ? (
-				<div className="flex flex-1 items-center justify-center md:text-xl lg:text-3xl">
+				<main className="flex flex-1 items-center justify-center md:text-xl lg:text-3xl">
 					No habits found
-				</div>
+				</main>
 			) : (
-				<div className="flex flex-col items-center gap-3 py-2">
+				<main className="flex flex-col items-center gap-3 py-2">
 					{habits.map((habit, i) => (
 						<div key={i}>
-							<HeatMap />
+							<HeatMap habit={habit} />
 						</div>
 					))}
-				</div>
+				</main>
 			)}
 		</div>
 	);
