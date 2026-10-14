@@ -1,6 +1,8 @@
-[ ] add less ... more to the right side or the heat map
-[ ] add dynamic bg-color for each cell, make a temporary function using an arbitrary factor to define the color pallet
+[ ] add dynamic bg-color for each cell for binary/checkbox habits, make a temporary function using an arbitrary factor to define the color pallet
 [ ] change logo to only 3 cells
+
+10-14-2026
+[x] implement heat map layout in ProtoType component
 
 10-13-2026
 [x] write down to the data.json file creating a habit object *Saving on localStorage for now
