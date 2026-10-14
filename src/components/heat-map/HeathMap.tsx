@@ -1,8 +1,11 @@
 import { useState } from 'react';
 import { Icon } from '@iconify/react';
+import Select from './Select';
 
-const HeatMap = () => {
+const HeatMap = ({ habit }) => {
+	console.log('🐟 - HeatMap - habit:', habit);
 	const [isCollapsed, setIsCollapsed] = useState(true);
+	const [showDropdown, setShowDropdown] = useState(false);
 
 	function generateYearDays(year: any) {
 		const days = [];
@@ -46,13 +49,25 @@ const HeatMap = () => {
 	}
 
 	const days = generateYearDays(2026);
+	console.log('🐟 - HeatMap - days:', days);
 	const firstDayOffset = days[0].weekday;
 	const monthLabels = getMonthLabels(days, firstDayOffset);
 
 	return (
-		<div className="bg-background-secondary w-[clamp(200px,90vw,800px)] rounded-lg border border-[#1e1e1f] p-3">
+		<div
+			onBlur={() => setShowDropdown(false)}
+			className="bg-bg2 w-[clamp(200px,90vw,800px)] rounded-lg border border-[#1e1e1f] p-3"
+		>
 			<header className="flex w-full items-center justify-between pr-1 text-[18px] font-medium text-gray-200">
-				<span className="text-sm text-[#48494b] lg:text-base">5,000 KMs</span>
+				<div className="flex items-center gap-2">
+					<Select showDropDown={showDropdown} setShowDropDown={setShowDropdown} />
+					<div className="flex items-center gap-4">
+						<span className="text-base1 text-sm lg:text-base xl:text-lg">
+							{habit?.name || '-'}
+						</span>
+						<span className="text-base2 text-sm lg:text-base">{`${habit?.entries?.length || '0'} days`}</span>
+					</div>
+				</div>
 				<div className="flex h-full items-center gap-2 p-0.5">
 					<Icon
 						onClick={() => setIsCollapsed((prev) => !prev)}
