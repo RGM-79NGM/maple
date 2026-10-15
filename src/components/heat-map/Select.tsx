@@ -18,10 +18,10 @@ const Select = ({ showDropDown, setShowDropDown }) => {
 	];
 
 	return (
-		<div className="relative flex w-30 flex-col gap-2 lg:w-36">
+		<div className="relative flex w-30 flex-col gap-2 lg:w-46 xl:w-56">
 			<button
 				onClick={() => setShowDropDown((prev) => !prev)}
-				className="border-bg flex cursor-pointer items-center justify-between gap-2 rounded-md border-2 py-1 pr-3 pl-5 sm:py-1 md:py-1.5"
+				className="border-bg flex cursor-pointer items-center justify-between gap-2 rounded-lg border-3 py-1 pr-3 pl-5 sm:py-1 md:py-1.5"
 			>
 				<div className="flex items-center gap-2 text-sm lg:text-[15px]">
 					{selectedDateRange}

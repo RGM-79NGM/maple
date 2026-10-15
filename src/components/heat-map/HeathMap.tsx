@@ -60,7 +60,10 @@ const HeatMap = ({ habit }) => {
 		>
 			<header className="flex w-full items-center justify-between pr-1 text-[18px] font-medium text-gray-200">
 				<div className="flex items-center gap-2">
-					<Select showDropDown={showDropdown} setShowDropDown={setShowDropdown} />
+					<Select
+						showDropDown={showDropdown}
+						setShowDropDown={setShowDropdown}
+					/>
 					<div className="flex items-center gap-4">
 						<span className="text-base1 text-sm lg:text-base xl:text-lg">
 							{habit?.name || '-'}
