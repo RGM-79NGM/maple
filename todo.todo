@@ -1,5 +1,15 @@
-[ ] add dynamic bg-color for each cell for binary/checkbox habits, make a temporary function using an arbitrary factor to define the color pallet
-[ ] change logo to only 3 cells
+10-16-2026
+[ ] CreateHabit -> use the new `generateHabitDays` function in the CreateHabit component and replace
+the property `entries` with `days`
+[ ] HeatMap2 -> add a small confirmation modal when clicking on a day block, so binary habits only
+need that for now.
+[ ] HeatMap2 -> add an input in the confirmation modal, so to add a comment
+[ ] HeatMap2 -> add a comment property to the `day` obj: `habit.days[i].comment<string>.
+[ ] HeatMap2 -> add an update function to update the habit stored in the localStorage
+
+10-15-2026
+[x] change logo to only 3 cells. Edit: I actually created one with 3 and another with 2 cells
+[x] add dynamic bg-color for each cell for binary/checkbox habits, make a temporary function using an arbitrary factor to define the color pallet
 
 10-14-2026
 [x] implement heat map layout in ProtoType component
