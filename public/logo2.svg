@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Centered 3-dot logo mark -->
+  <g transform="translate(138, 138)">
+    <!-- Top-Left (Row 2, Col 1): Light Mint Green -->
+    <rect x="0" y="0" width="104" height="104" rx="28" fill="#f9fafb" />
+
+    <!-- Top-Right / Center (Row 2, Col 2): Vibrant Emerald Green -->
+    <rect x="132" y="0" width="104" height="104" rx="28" fill="#22c57e" />
+  </g>
+</svg>
