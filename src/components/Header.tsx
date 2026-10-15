@@ -5,12 +5,16 @@ export const Header = () => {
 	const navigate = useNavigate();
 
 	return (
-		<div className="border-base2 flex items-center justify-between border-b px-10 py-4 pt-2 pl-5">
+		<div className="flex items-center justify-between pr-10 pl-2.5">
 			<button
 				onClick={() => navigate('/')}
-				className="flex cursor-pointer flex-col leading-0.5"
+				className="relative flex cursor-pointer flex-col leading-0.5"
 			>
-				<img src="/logo.png" alt="" className="size-16" />
+				<img src="/logo2.svg" alt="" className="md:w-16 lg:w-27" />
+
+				<span className="text-base1 absolute bottom-5.5 left-[23%] font-semibold lg:text-xl">
+					Maple
+				</span>
 			</button>
 
 			<Icon
