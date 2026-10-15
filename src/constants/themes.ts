@@ -1,3 +1,28 @@
+export function returnColorTheme(themeName: string) {
+	if (!themeName) return;
+
+	return themes[themeName];
+}
+
+export function returnColorIntensity(theme: Theme, num: number) {
+	if (!theme || num == null || num == undefined) return;
+
+	switch (num) {
+		case 0:
+			return theme.block1;
+		case 1:
+			return theme.block2;
+		case 2:
+			return theme.block3;
+		case 3:
+			return theme.block4;
+		case 4:
+			return theme.block5;
+		default:
+			return theme.block4; // Default highlight color
+	}
+}
+
 export type Theme = {
 	bg: string;
 	bgDarker: string;
