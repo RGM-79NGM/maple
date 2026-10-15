@@ -1,11 +1,18 @@
 import { useNavigate } from 'react-router-dom';
-import HeatMap from '../components/heat-map/HeathMap';
+// import HeatMap from '../components/heat-map/HeathMap';
+import { HeatMap2 } from '../components/heat-map-2/HeatMap2';
+import { generateHabitDays } from '../calculations/generateHabitDays';
 
 export const Home = () => {
-	// const [entries, setEntries] = useState([]);
-	// const [average, setAverage] = useState();
 	const habits = JSON.parse(localStorage.getItem('habits') || '[]');
 	const navigate = useNavigate();
+
+	const tempHabit = {
+		name: 'Read books',
+		type: 'CHECKBOX',
+		colorTheme: 'terminal',
+		days: generateHabitDays(),
+	};
 
 	return (
 		<div className="flex min-h-0 flex-1 flex-col gap-5">
@@ -27,8 +34,8 @@ export const Home = () => {
 			) : (
 				<main className="flex flex-col items-center gap-3 py-2">
 					{habits.map((habit, i) => (
-						<div key={i}>
-							<HeatMap habit={habit} />
+						<div key={i} className="w-full">
+							<HeatMap2 habit={tempHabit} />
 						</div>
 					))}
 				</main>
