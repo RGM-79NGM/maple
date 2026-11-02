@@ -9,3 +9,4 @@
     }
   ]
 }
+    .expect("error while running tauri application");
