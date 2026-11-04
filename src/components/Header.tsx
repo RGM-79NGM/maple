@@ -8,12 +8,12 @@ export const Header = () => {
 		<div className="flex items-center justify-between pr-10 pl-2.5">
 			<button
 				onClick={() => navigate('/')}
-				className="relative flex cursor-pointer flex-col leading-0.5"
+				className="relative flex cursor-pointer flex-col items-center leading-0.5"
 			>
-				<img src="/logo2.svg" alt="" className="md:w-16 lg:w-27" />
+				<img src="/logo2.svg" alt="" className="md:w-16 lg:w-32" />
 
-				<span className="text-base1 absolute bottom-5.5 left-[23%] font-semibold lg:text-xl">
-					Maple
+				<span className="text-base1 absolute bottom-5.5 left-[18%] font-semibold lg:text-lg">
+					Tonegrid
 				</span>
 			</button>
 
