@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Icon } from '@iconify/react';
 
-const Select = ({ showDropDown, setShowDropDown }) => {
+export const Select = ({ showDropDown, setShowDropDown }) => {
 	const currentYear = String(new Date().getFullYear());
 	const [selectedDateRange, setSelectedDateRange] = useState(currentYear);
 	console.log('🐟 - Select - currentYear:', currentYear);
@@ -23,7 +23,7 @@ const Select = ({ showDropDown, setShowDropDown }) => {
 				onClick={() => setShowDropDown((prev) => !prev)}
 				className="border-bg flex cursor-pointer items-center justify-between gap-2 rounded-lg border-3 py-1 pr-3 pl-5 sm:py-1 md:py-1.5"
 			>
-				<div className="flex items-center gap-2 text-sm lg:text-[15px]">
+				<div className="flex items-center gap-2 text-sm sm:text-[13px] md:text-sm lg:text-[15px]">
 					{selectedDateRange}
 				</div>
 
@@ -53,5 +53,3 @@ const Select = ({ showDropDown, setShowDropDown }) => {
 		</div>
 	);
 };
-
-export default Select;
