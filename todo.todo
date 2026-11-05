@@ -6,6 +6,7 @@ need that for now.
 [ ] HeatMap2 -> add an input in the confirmation modal, so to add a comment
 [ ] HeatMap2 -> add a comment property to the `day` obj: `habit.days[i].comment<string>.
 [ ] HeatMap2 -> add an update function to update the habit stored in the localStorage
+[ ] test
 
 10-15-2026
 [x] change logo to only 3 cells. Edit: I actually created one with 3 and another with 2 cells
